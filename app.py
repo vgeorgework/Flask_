@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 import yaml
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app.config['MYSQL_USER'] = "root"
 app.config['MYSQL_PASSWORD'] = "testuser@123"
 app.config['MYSQL_DB'] = "TEST"
 
-mysql = MySQL(app)
+#mysql = MySQL(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
