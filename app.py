@@ -1,15 +1,19 @@
 from flask import Flask, render_template, request, redirect
 from flask_mysqldb import MySQL
 import yaml
+import os
 
 app = Flask(__name__)
 
 # Configure db
 #db = yaml.load(open('db.yaml'))
-app.config['MYSQL_HOST'] = "mysql"
+# app.config['MYSQL_HOST'] = "mysql"
+# app.config['MYSQL_DB'] = "TEST"
+app.config['MYSQL_HOST'] = os.getenv('mysql')
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 app.config['MYSQL_USER'] = "root"
 app.config['MYSQL_PASSWORD'] = "toor"
-app.config['MYSQL_DB'] = "TEST"
+
 
 mysql = MySQL(app)
 
