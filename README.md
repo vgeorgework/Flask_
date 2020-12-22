@@ -10,3 +10,5 @@ The application runs on localhost:5000
 
 CREATE TABLE users (name varchar(20), email varchar(40));
 SELECT * FROM users;
+
+To dump: kubectl exec service/mysql -- mysqldump -uroot -ptoor TEST > dump.sql

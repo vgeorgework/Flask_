@@ -29,10 +29,9 @@ spec:
       containers:
       - image: mysql
         name: mysql
-        env:
-          # Use secret in real usage
-        - name: MYSQL_ROOT_PASSWORD
-          value: toor
+        envFrom:
+        - secretRef:
+            name: mysql-secret
         ports:
         - containerPort: 3306
           name: mysql
