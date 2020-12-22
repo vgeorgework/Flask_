@@ -5,3 +5,11 @@ metadata:
 data:
   MYSQL_HOST: mysql
   MYSQL_DB: TEST
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+data:
+  MYSQL_USER: cm9vdA==
+  MYSQL_PASSWORD: dG9vcg==
