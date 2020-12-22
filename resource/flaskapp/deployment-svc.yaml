@@ -23,6 +23,8 @@ spec:
         envFrom:
         - configMapRef:
             name: mysql-config
+        - secretRef:
+            name: mysql-secret
 
 ---
 apiVersion: v1
