@@ -8,3 +8,7 @@ spec:
       image: flaskapp:latest
       imagePullPolicy: Never
 
+      envFrom:
+        - configMapRef:
+            name: mysql-config
+
