@@ -13,3 +13,4 @@ metadata:
 data:
   MYSQL_USER: cm9vdA==
   MYSQL_PASSWORD: dG9vcg==
+  MYSQL_ROOT_PASSWORD: dG9vcg==
