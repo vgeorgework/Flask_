@@ -28,9 +28,9 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: vgeorgework/flask-mysql
+      - image: mysql-db
         name: mysql
-        imagePullPolicy: Always
+        imagePullPolicy: Never
         envFrom:
         - secretRef:
             name: mysql-secret
