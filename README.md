@@ -3,6 +3,7 @@ Clone this project <br />
 #minikube start <br />
 #eval $(minikube docker-env) <br />
 #docker build -t flaskapp . <br />
+#docker run -e MYSQL_ROOT_PASSWORD=toor -p3360:3360 -d --name=mysql mysql-db
 <br />
 
 Run the application by executing the command python3 app.py <br />
