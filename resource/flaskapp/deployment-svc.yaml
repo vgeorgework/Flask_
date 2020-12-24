@@ -60,8 +60,8 @@ kind: Secret
 metadata:
   name: db-root-credentials-flask
 data:
- username: cm9vdAo=
- password: YWRtaW4xMjM=
+  username: cm9vdAo=
+  password: YWRtaW4xMjM=
 ---
 apiVersion: v1
 kind: ConfigMap
