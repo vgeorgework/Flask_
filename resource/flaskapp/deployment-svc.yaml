@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: flask-web
-        image: vgeorgework/flaskapp:v1
-        imagePullPolicy: Always
+        image: flaskapp
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
         env:
