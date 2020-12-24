@@ -26,7 +26,13 @@ def index():
         name = userDetails['name']
         email = userDetails['email']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO users(name, email) VALUES(%s, %s)",(name, email))
+        cur.execute("SHOW TABLES")
+        if cur.fetchone():
+            cur.execute("INSERT INTO users(name, email) VALUES(%s, %s)",(name, email))
+            print("yaaaaay table is there")
+        else:
+            cur.execute("CREATE TABLE users (name varchar(20), email varchar(40));")
+            cur.execute("INSERT INTO users(name, email) VALUES(%s, %s)",(name, email))
         mysql.connection.commit()
         cur.close()
         return redirect('/users')
