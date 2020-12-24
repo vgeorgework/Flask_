@@ -60,7 +60,7 @@ kind: Secret
 metadata:
   name: db-root-credentials-flask
 data:
-  username: cm9vdAo=
+  #username: cm9vdAo=
   password: YWRtaW4xMjM=
 ---
 apiVersion: v1
@@ -68,5 +68,6 @@ kind: ConfigMap
 metadata:
   name: db-conf-flask
 data:
+ username: root
  host: mysql
  name: TEST
