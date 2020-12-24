@@ -26,9 +26,9 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql-db
-        name: mysql:5.7 #image from docker-hub
-        imagePullPolicy: Never
+      - image: mysql:5.7
+        name: mysql #image from docker-hub
+        imagePullPolicy: Always
         env:
         - name: MYSQL_ROOT_PASSWORD # Setting Root Password of mysql From a 'Secret'
           valueFrom:
@@ -50,6 +50,7 @@ spec:
             configMapKeyRef:
               name: db-conf
               key: name
+        ports:
         - containerPort: 3306
           name: mysql
         volumeMounts:
