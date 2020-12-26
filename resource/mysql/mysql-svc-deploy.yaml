@@ -15,6 +15,18 @@ spec:
     tier: database
   clusterIP: None  # We Use DNS, Thus ClusterIP is not relevant
 ---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+    name: pv-mysql
+spec:
+    accessModes:
+        - ReadWriteOnce
+    capacity:
+        storage: 1Gi
+    hostPath:
+        path: /tmp/data
+---
 # Define a 'Persistent Voulume Claim'(PVC) for Mysql Storage, dynamically provisioned by cluster
 apiVersion: v1
 kind: PersistentVolumeClaim
