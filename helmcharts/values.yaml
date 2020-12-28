@@ -1,0 +1,14 @@
+#Flask app values
+flaskreplicaCount: 2
+mysqlreplicaCount: 1
+password: YWRtaW4xMjM=
+host: mysql
+name: TEST
+
+#mysql values
+#db-credentials
+dbusername: dGVzdHVzZXI=
+dbpassword: dGVzdHVzZXJAMTIz
+#db-root-credentials
+rootpassword: YWRtaW4xMjM=
+
