@@ -23,8 +23,8 @@ spec:
         env:
         - name: MYSQL_USER # Setting USER username on mysql From a 'Secret'
           valueFrom:
-            configMapKeyRef:
-              name: db-conf-flask
+            secretKeyRef:
+              name: db-root-credentials-flask
               key: username
         - name: MYSQL_PASSWORD # Setting USER username on mysql From a 'Secret'
           valueFrom:
@@ -60,7 +60,7 @@ kind: Secret
 metadata:
   name: db-root-credentials-flask
 data:
-  #username: cm9vdAo=
+  username: cm9vdA==
   password: YWRtaW4xMjM=
 ---
 apiVersion: v1
@@ -68,6 +68,5 @@ kind: ConfigMap
 metadata:
   name: db-conf-flask
 data:
- username: root
  host: mysql
  name: TEST
