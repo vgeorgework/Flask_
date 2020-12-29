@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: db-root-credentials-flask
 data:
-  #username: cm9vdAo=
+  username: {{ .Values.username}}
   password: {{ .Values.password}}
 ---
 apiVersion: v1
@@ -11,6 +11,6 @@ kind: ConfigMap
 metadata:
   name: db-conf-flask
 data:
- username: root
+ #username: root
  host: {{ .Values.host}}
  name: {{ .Values.name}}
