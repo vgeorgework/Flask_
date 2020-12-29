@@ -14,13 +14,13 @@ example : # kubectl create -f mysql-svc-deploy.yaml # this will deploy all the c
 
 ## Helm Chart commands =========================================================
 
-######Execute below commands in minikube:
+###### Execute below commands in minikube:
 #cd Flask_
 #minikube start <br />
 #eval $(minikube docker-env) <br />
 #cd Flask_/ <br />
 #helm install flaskapp helmcharts/
-#####To verify the deployment
+##### To verify the deployment
 #helm list
 #kubectl get all
 -----------------------------------------------------------------------------------------------------
