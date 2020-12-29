@@ -1,8 +1,8 @@
 #Flask app values
 flaskreplicaCount: 2
 mysqlreplicaCount: 1
-username: cm9vdA==
-password: YWRtaW4xMjM=
+username: dGVzdHVzZXI=
+password: dGVzdHVzZXJAMTIz
 host: mysql
 name: TEST
 
