@@ -1,6 +1,7 @@
 # Flask app demo project #
 This is a demo project that uses a flask app which connects to mysql server both hosted on kubernetes.<br />
 To run this project execute below commands using [minikube](https://minikube.sigs.k8s.io/docs/start/).<br />
+`$minikube start`
 #minikube start <br />
 #eval $(minikube docker-env) <br />
 #cd Flask_/resources/ <br />
