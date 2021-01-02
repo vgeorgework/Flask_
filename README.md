@@ -23,10 +23,14 @@ Example :`# kubectl create -f mysql-svc-deploy.yaml ` this will deploy all the c
 # helm install flaskapp helmcharts/
 # minikube service flask-web-svc
 ```
-## To verify the deployment
+## To verify the deployment:
 ```
 # helm list 
 # kubectl get all 
+```
+## To run this with dynamic values:
+```
+# helm install --set db.username=root,db.password=toor flaskapp helmcharts/
 ```
 
 
