@@ -16,6 +16,6 @@ sleep 1m
 echo "checking with kubectl get all ...................................................... "
 sleep 5
 kubectl get all
-echo "executing service command in minikube 
+echo "executing service command in minikube" 
 sleep 5
 minikube service flask-web-svc
