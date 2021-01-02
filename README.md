@@ -28,9 +28,9 @@ Example :`# kubectl create -f mysql-svc-deploy.yaml ` this will deploy all the c
 # helm list 
 # kubectl get all 
 ```
-## To run this with dynamic values:
+## To run helm chart with dynamic values:
 ```
-# helm install --set db.username=root,db.password=toor flaskapp helmcharts/
+# helm install --set db.username=testuser,db.password=user@123 flaskapp helmcharts/
 ```
 
 
