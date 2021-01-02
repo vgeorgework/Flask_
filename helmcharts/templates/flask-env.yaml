@@ -3,8 +3,8 @@ kind: Secret
 metadata:
   name: db-root-credentials-flask
 data:
-  username: {{ .Values.db.username}}
-  password: {{ .Values.db.password}}
+  username: {{ .Values.db.username | required "database username required" | b64enc | quote}}
+  password: {{ .Values.db.password | required "databse password required" | b64enc | quote}}
 ---
 apiVersion: v1
 kind: ConfigMap
