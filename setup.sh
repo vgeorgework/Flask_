@@ -1,10 +1,10 @@
 #!/bin/sh
 #To execute this script the host machine needs to installed minikube, helm, git and kubectl
+# git clone https://github.com/vgeorgework/Flask_.git
+# cd Flask_
+# git checkout helmchart
 minikube start
 eval $(minikube docker-env)
-git clone https://github.com/vgeorgework/Flask_.git
-cd Flask_
-git checkout helmchart
 helm install --set db.username=testuser,db.password=user@123 flaskapp helmcharts/
 kubectl get all
 echo "sleeper executed for around 2 mins for cluster creation............................................................."
