@@ -33,4 +33,12 @@ Example :`# kubectl create -f mysql-svc-deploy.yaml ` this will deploy all the c
 # helm install --set db.username=testuser,db.password=user@123 flaskapp helmcharts/
 ```
 
+###### To execute the project using setup.sh script:
+
+Step1: clone the github repo using `#git clone https://github.com/vgeorgework/Flask_.git` <br />
+Step2: change directory `#cd Flask_` <br />
+Step3: checkout "helmchart" branch `#git checkout helmchart` <br />
+Step4: execute setup.sh file #sh setup.sh     //will create flask app and MySQL services in your PC and opens up your default browser. <br />
+<br />
+For your ease of use, I created a "setup.sh" script to execute all the steps automatically. The shell script I created expects the following programs to be installed on your PC.1, minikube2, helm3, docker
 
