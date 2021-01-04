@@ -4,7 +4,7 @@ app:
 
 #Database values.
 db:
-  mysqlreplicaCount: 1
+  mysqlreplicaCount: 2
   username: #dGVzdHVzZXI=
   password: #dGVzdHVzZXJAMTIz
   host: mysql

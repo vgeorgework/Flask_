@@ -1,6 +1,6 @@
 # Configure 'Deployment' of mysql server
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: mysql
   labels:
@@ -8,12 +8,13 @@ metadata:
     tier: database
 spec:
   replicas: {{ .Values.db.mysqlreplicaCount}}
+  serviceName: "mysql"
   selector: # mysql Pod Should contain same labels 
     matchLabels:
       app: mysql
       tier: database
-  strategy:
-    type: Recreate
+      #  strategy:
+      # type: Recreate
   template:
     metadata:
       labels: # Must match 'Service' and 'Deployment' selectors
