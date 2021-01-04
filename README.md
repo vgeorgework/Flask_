@@ -41,7 +41,7 @@ Step3: checkout "helmchart" branch `#git checkout helmchart` <br />
 Step4: execute setup.sh file #sh setup.sh     //will create flask app and MySQL services in your PC and opens up your default browser. <br />
 <br />
 For your ease of use, I created a "setup.sh" script to execute all the steps automatically. The shell script I created expects the following programs to be installed on your PC.
-1, minikube
-2, helm
-3, docker
+1, minikube <br />
+2, helm <br />
+3, docker <br />
 
