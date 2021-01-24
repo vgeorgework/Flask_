@@ -5,7 +5,7 @@ metadata:
   labels:
     app: flask-deploy
 spec:
-  replicas: 3
+  replicas: {{ .Values.app.flaskreplicaCount}}
   selector:
     matchLabels:
       app: flask-web
@@ -41,32 +41,3 @@ spec:
             configMapKeyRef:
               name: db-conf-flask
               key: host
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: flask-web-svc
-spec:
-  selector:
-    app: flask-web
-  ports:
-    - port: 5000
-      targetPort: 5000
-  type: LoadBalancer
-
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: db-root-credentials-flask
-data:
-  username: cm9vdA==
-  password: YWRtaW4xMjM=
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: db-conf-flask
-data:
- host: mysql
- name: TEST
