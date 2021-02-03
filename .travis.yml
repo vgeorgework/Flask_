@@ -8,6 +8,6 @@ before_install:
 script:
   - docker run -d -p 5000:5000 vgeorgework/flask 
 
-# after_success:
-#   - echo "$DOCKER_PASSWORD" | docekr login -u "$DOCKER_ID" --password-stdin
-#   - docker push vgeorgework/flask 
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push vgeorgework/flask 
